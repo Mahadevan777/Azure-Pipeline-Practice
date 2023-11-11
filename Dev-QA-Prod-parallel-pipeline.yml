@@ -24,6 +24,8 @@ stages:
     
   - stage: Prod
     dependsOn:
+      - QA_Team_1
+      - QA_Team_2
     jobs:
       - job: Pord_Job
 
