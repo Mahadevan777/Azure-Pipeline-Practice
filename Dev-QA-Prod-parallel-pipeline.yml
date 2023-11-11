@@ -1,19 +1,23 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
+# Dev-QA-Prod-Parallel-azure-pipeline
 
 trigger:
-- main
+ - main
 
 pool:
   vmImage: ubuntu-latest
 
-steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
+stages:
+  - stage: Dev
+    jobs:
+      - job: Dev_Job
+    
+  - stage: QA
+    dependsOn: []
+    jobs:
+      - job: QA_Job
+    
+  - stage: Prod
+    dependsOn: Dev
+    jobs:
+      - job: Pord_Job
 
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
-  displayName: 'Run a multi-line script'
