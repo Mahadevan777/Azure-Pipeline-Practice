@@ -9,13 +9,13 @@ pool:
 stages:
   - stage: Dev
     jobs:
-      - job: Dev-Job
+      - job: Dev_Job
     
   - stage: QA
     jobs:
-      - job: QA-Job
+      - job: QA_Job
     
   - stage: Prod
     jobs:
-      - job: Pord-Job
+      - job: Pord_Job
 
