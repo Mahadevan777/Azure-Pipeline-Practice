@@ -1,4 +1,5 @@
 # Dev-QA-Prod-Parallel-azure-pipeline
+#     dependsOn: [] #this removes the dependency on previous stage
 
 trigger:
  - main
@@ -11,13 +12,18 @@ stages:
     jobs:
       - job: Dev_Job
     
-  - stage: QA
-    dependsOn: [] #this removes the dependency on previous stage 
+  - stage: QA-Team-1
+    dependsOn: Dev
     jobs:
       - job: QA_Job
+
+  - stage: QA-Team-2
+    dependsOn: Dev
+    jobs:
+        - job: QA_Job
     
   - stage: Prod
-    dependsOn: [] #this removes the dependency on previous stage 
+    dependsOn:
     jobs:
       - job: Pord_Job
 
