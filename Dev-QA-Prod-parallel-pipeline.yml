@@ -12,12 +12,12 @@ stages:
       - job: Dev_Job
     
   - stage: QA
-    dependsOn: []
+    dependsOn: [] #this removes the dependency on previous stage 
     jobs:
       - job: QA_Job
     
   - stage: Prod
-    
+    dependsOn: [] #this removes the dependency on previous stage 
     jobs:
       - job: Pord_Job
 
