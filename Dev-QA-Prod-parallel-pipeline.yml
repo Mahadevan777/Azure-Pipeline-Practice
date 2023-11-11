@@ -13,10 +13,6 @@ stages:
     jobs:
       - job: Dev_Job
     
-  - stage: QA_Team_1
-    dependsOn: []
-    jobs:
-      - job: QA_Job
 
   - stage: QA_Team_2
     dependsOn: []
@@ -24,11 +20,3 @@ stages:
         - job: QA_Job
     pool: 
       vmImage: windows-latest
-    
-  - stage: Prod 
-    dependsOn:
-      - QA_Team_1
-      - QA_Team_2
-    jobs:
-      - job: Pord_Job
-
