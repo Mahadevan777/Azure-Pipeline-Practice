@@ -25,8 +25,7 @@ stages:
     pool: 
       vmImage: windows-latest
     
-  - stage: Prod
-    pool: 
+  - stage: Prod 
     dependsOn:
       - QA_Team_1
       - QA_Team_2
