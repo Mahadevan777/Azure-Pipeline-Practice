@@ -12,11 +12,11 @@ stages:
       - job: Dev_Job
     
   - stage: QA
-    dependsOn: Dev
     jobs:
       - job: QA_Job
     
   - stage: Prod
+    dependsOn: Dev
     jobs:
       - job: Pord_Job
 
