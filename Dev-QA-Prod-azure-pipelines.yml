@@ -1,0 +1,21 @@
+# Dev-QA-Prod-azure-pipeline Practise
+
+trigger:
+ - main
+
+pool:
+  vmImage: ubuntu-latest
+
+stages:
+  - stage: Dev
+    jobs:
+      - job: Dev-Job
+    
+  - stage: QA
+    jobs:
+      - job: QA-Job
+    
+  - stage: Prod
+    jobs:
+      - job: Pord-Job
+
