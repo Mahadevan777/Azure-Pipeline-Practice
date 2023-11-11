@@ -12,12 +12,12 @@ stages:
     jobs:
       - job: Dev_Job
     
-  - stage: QA-Team-1
+  - stage: QA-Team_1
     dependsOn: Dev
     jobs:
       - job: QA_Job
 
-  - stage: QA-Team-2
+  - stage: QA-Team_2
     dependsOn: Dev
     jobs:
         - job: QA_Job
